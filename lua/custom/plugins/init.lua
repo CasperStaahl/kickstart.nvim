@@ -4,18 +4,4 @@
 -- See the kickstart.nvim README for more information
 return {
 
-  {
-    'nyngwang/nvimgelion',
-    config = function ()
-    end
-  },
-
-  {
-    "nvim-tree/nvim-tree.lua",
-    version = "*",
-    config = function()
-      require("nvim-tree").setup {}
-    end,
-  }
-
 }
