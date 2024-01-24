@@ -92,7 +92,13 @@ require('lazy').setup({
       "nvim-tree/nvim-web-devicons",
     },
     config = function()
-      require("nvim-tree").setup {}
+      require("nvim-tree").setup {
+        actions = {
+          change_dir = {
+            global = true  -- Set this option to true
+          },
+        },
+      }
     end,
   },
 
