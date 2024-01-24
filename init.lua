@@ -77,6 +77,25 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
+  {
+    'm4xshen/autoclose.nvim',
+    config = function()
+      require("autoclose").setup {}
+    end,
+  },
+
+  {
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    lazy = false,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("nvim-tree").setup {}
+    end,
+  },
+
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   { -- LSP Configuration & Plugins
@@ -117,10 +136,12 @@ require('lazy').setup({
   },
 
   {
-    'nyngwang/nvimgelion',
+    'sainnhe/everforest',
     priority = 1000,
     config = function ()
-      vim.cmd.colorscheme 'nvimgelion'
+      vim.opt.background = 'dark'
+      vim.g.everforest_background = 'soft'
+      vim.cmd.colorscheme 'everforest'
     end,
   },
 
