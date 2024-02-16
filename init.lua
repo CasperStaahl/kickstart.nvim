@@ -78,10 +78,9 @@ require('lazy').setup({
   'tpope/vim-sleuth',
 
   {
-    'm4xshen/autoclose.nvim',
-    config = function()
-      require("autoclose").setup {}
-    end,
+      'windwp/nvim-autopairs',
+      event = "InsertEnter",
+      opts = {} -- this is equalent to setup({}) function
   },
 
   {
@@ -200,7 +199,13 @@ require('lazy').setup({
     build = ":TSUpdate",
   },
 
-  'justinmk/vim-sneak',
+  {
+    'ggandor/leap.nvim',
+    config = function ()
+      require('leap').create_default_mappings()
+    end,
+
+  },
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
